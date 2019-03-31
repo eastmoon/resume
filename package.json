@@ -1,0 +1,25 @@
+{
+  "name": "ebook",
+  "version": "1.0.0",
+  "description": "It is gitbook project for personal resume",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gitbook serve",
+    "build": "gitbook build",
+    "ebook": "npm run pdf & npm run epub",
+    "pdf": "gitbook pdf ./ ./build/ebook.pdf",
+    "epub": "gitbook epub ./ ./build/ebook.epub"
+  },
+  "keywords": [
+    "gitbook",
+    "ebook"
+  ],
+  "author": "jacky.eastmoon",
+  "license": "ISC",
+  "devDependencies": {
+    "ebook-convert": "^2.0.1",
+    "gitbook": "^3.2.3",
+    "gitbook-cli": "^2.3.2"
+  }
+}

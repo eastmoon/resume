@@ -1,0 +1,8 @@
+{
+    "title": "Personal Resume",
+    "author": "Jacky.Eastmoon",
+    "pluginsConfig": {},
+    "structure": {
+        "readme": "introduction.md"
+    }
+}
