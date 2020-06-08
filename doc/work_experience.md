@@ -196,7 +196,7 @@
 ##### 專案與產品 ( Project & Product )
 
 + Unity應用程式 ( Unity application )
-  - 研究連結：https://github.com/eastmoon/Tutorial-Unity/
+  - 研究連結：https://github.com/eastmoon/tutorial-unity
   - 時間：2016/05 - 現在
   - 專案目標：使用 Unity 開發老虎機 ( Slot machine )。
   - 內容描述：
@@ -207,7 +207,7 @@
 <p />
 
 + Android 應用程式 ( Android application )
-  - 研究連結：https://github.com/eastmoon/Tutorial-Android
+  - 研究連結：https://github.com/eastmoon/tutorial-android
   - 時間：2016/02 - 現在
   - 專案目標：使用 Android 開發彩票遊戲應用程式。
   - 內容描述：
@@ -219,7 +219,7 @@
 <p />
 
 + 行動裝置網站嵌入PhoneGap ( Mobile WebSite in PhoneGap )
-  - 研究連結：https://github.com/eastmoon/Tutorial-CrossPlatform
+  - 研究連結：https://github.com/eastmoon/tutorial-cross-platform-sdk
   - 時間：2015/10 - 2016/02
   - 專案目標：使用網頁開發彩票應用程式，可兼容於網頁與行動裝置。
   - 內容描述：
@@ -249,7 +249,7 @@
 ##### 專案與產品 ( Project & Product )
 
 + 時間軸腳本閱讀器 ( Timeline Script Reader )
-  - 研究連結：https://github.com/eastmoon/Sample-TimelineScriptReader
+  - 研究連結：https://github.com/eastmoon/timeline-script-reader-project
   - 時間：2015/04 - 2015/07
   - 專案目標：使用C#與Unity設計腳本 ( Script ) 閱讀器，並可於執行期間運作。
   - 內容描述：
