@@ -1,6 +1,7 @@
 # third-party library
 node_modules/
 _book/
+*.md
 
 # install library lock file
 npm-debug.*
