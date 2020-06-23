@@ -113,7 +113,7 @@ goto end
     echo      --help, -h        Show more information with CLI.
     echo.
     echo Command:
-    echo      pdf               Build Resume PDF file.
+    echo      gitbook           Build Resume PDF file by gitbook tool.
     echo.
     echo Run 'cli [COMMAND] --help' for more information on a command.
     goto end
@@ -121,11 +121,11 @@ goto end
 
 :: ------------------- Command "pdf" mathod -------------------
 
-:cli-pdf (
-    echo ^> Build ebook Docker images
+:cli-gitbook (
+    echo ^> Build ebook Docker images with gitbook tools
     docker build --rm -t ebook:%PROJECT_NAME% ./docker/ebook
 
-    echo ^> Copy document into gitbook directory
+    echo ^> Copy document into tmp directory
     IF NOT EXIST build (
         mkdir build\tmp
         mkdir build\pdf
@@ -148,15 +148,15 @@ goto end
     goto end
 )
 
-:cli-pdf-args (
+:cli-gitbook-args (
     for %%p in (%*) do (
         if "%%p"=="--dev" ( set EBOOK_DEVELOPER=1 )
     )
     goto end
 )
 
-:cli-pdf-help (
-    echo Build Resume PDF file, using Docker container with node.js images.
+:cli-gitbook-help (
+    echo Build Resume PDF file, using Docker container with node.js images and gitbook tool.
     echo.
     echo Options:
     echo      --dev             Build Docker iamges and into container. it is work for developer.
