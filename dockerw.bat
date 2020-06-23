@@ -125,11 +125,25 @@ goto end
     echo ^> Build ebook Docker images
     docker build --rm -t ebook:%PROJECT_NAME% ./docker/ebook
 
+    echo ^> Copy document into gitbook directory
+    IF NOT EXIST build (
+        mkdir build\tmp
+        mkdir build\pdf
+    )
+    xcopy /Y /E doc build\tmp
+    copy node\gitbook\*.* build\tmp
+
     echo ^> Startup docker container instance
     IF defined EBOOK_DEVELOPER (
-        docker run -ti --rm -v %cd%\node\gitbook:/repo/ ebook:%PROJECT_NAME% bash
+        docker run -ti --rm^
+            -v %cd%\build\tmp:/repo/^
+            -v %cd%\build\pdf:/repo/build/^
+            ebook:%PROJECT_NAME% bash
     ) else (
-        docker run -ti --rm -v %cd%\node\gitbook:/repo/ ebook:%PROJECT_NAME% bash -l -c "ls"
+        docker run -ti --rm^
+            -v %cd%\build\tmp:/repo/^
+            -v %cd%\build\pdf:/repo/build/^
+            ebook:%PROJECT_NAME% bash -l -c "yarn pdf"
     )
     goto end
 )
