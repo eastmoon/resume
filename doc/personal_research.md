@@ -1,39 +1,5 @@
 ## 個人研究 ( Personal Research )
 
-#### 電腦視覺與互動系統 ( Computer vision and interactive system )
-
-<table>
-  <tr>
-    <th width="10%">部門<br />職稱</th>
-    <th width="50%">專案主持人</th>
-    <th width="10%">時間</th>
-    <th width="30%">2006/09 – 2018/04</th>
-  </tr>
-  <tr><td colspan=4>
-    <ul>
-      <li> 研究影像處理、影像分析、電腦視覺。
-      <li> 主要題目為手勢辨識、物件偵測與辨識。
-      <li> 與實驗室學生進行文獻討論與學習。
-    </ul>
-  </td></tr>
-</table>
-
-##### 專案與產品 ( Project & Product )
-
-+ 沙盒系統 ( Sandbox  system )
-  - 專案目標：使用Kinect擷取深度訊息，並投影對應顏色於沙盒。
-  - 關鍵知識：電腦視覺 ( Computer vision )、影像處理 ( Image processing )、電腦圖學 ( Computer graphics )、嵌入式開發者工具開發 ( Embedded Developer Kit develop )
-  - 相關設計經驗：
-    + 2016 – 協助實驗室學生專題，以沙盒基礎技術進行桌遊物件偵測。
-    + 2014 – 領到實驗室碩士生製作沙盒系土範例，此為外包專案。
-    + 2012 – 指導實驗室學生製作投影系統專案。
-  - 內容描述：
-    + 互動系統包含輸入感測器、運算單元、輸出裝置。
-    + 輸入感測器使用 Kinect，以此取得顏色與深度影像。
-    + 運算單元使用筆電或嵌入式開發工具。
-    + 輸出裝置使用 LCD 螢幕或微型投影機。
-    + 使用函式庫為 OpenCV、 OpenGL。
-
 #### 遊戲規則架構 ( Game Rule Architecture )
 
 <table>
@@ -74,7 +40,12 @@
   - 時間：2010/08
   - 內容描述：研究如何整合與設計遊戲在行動裝置盛行的時代，分析不同於90年代電腦、電視遊戲的市場規模與成因。
 
-<div STYLE="page-break-after: always;" alt="分頁符號"></div>
+<p />
+
++ MudOS for node.js
+  - 時間：2018/04 - 現在
+  - 內容描述：以 Node.js 實作 MUD 核心系統架構，藉此來實踐遊戲規則架構
+  - 研究連結：https://github.com/eastmoon/console-game-project
 
 #### 桌遊 ( Board game )
 
@@ -92,6 +63,40 @@
     </ul>
   </td></tr>
 </table>
+
+#### 電腦視覺與互動系統 ( Computer vision and interactive system )
+
+<table>
+  <tr>
+    <th width="10%">部門<br />職稱</th>
+    <th width="50%">專案主持人</th>
+    <th width="10%">時間</th>
+    <th width="30%">2006/09 – 2018/04</th>
+  </tr>
+  <tr><td colspan=4>
+    <ul>
+      <li> 研究影像處理、影像分析、電腦視覺。
+      <li> 主要題目為手勢辨識、物件偵測與辨識。
+      <li> 與實驗室學生進行文獻討論與學習。
+    </ul>
+  </td></tr>
+</table>
+
+##### 專案與產品 ( Project & Product )
+
++ 沙盒系統 ( Sandbox  system )
+  - 專案目標：使用Kinect擷取深度訊息，並投影對應顏色於沙盒。
+  - 關鍵知識：電腦視覺 ( Computer vision )、影像處理 ( Image processing )、電腦圖學 ( Computer graphics )、嵌入式開發者工具開發 ( Embedded Developer Kit develop )
+  - 相關設計經驗：
+    + 2016 – 協助實驗室學生專題，以沙盒基礎技術進行桌遊物件偵測。
+    + 2014 – 領到實驗室碩士生製作沙盒系土範例，此為外包專案。
+    + 2012 – 指導實驗室學生製作投影系統專案。
+  - 內容描述：
+    + 互動系統包含輸入感測器、運算單元、輸出裝置。
+    + 輸入感測器使用 Kinect，以此取得顏色與深度影像。
+    + 運算單元使用筆電或嵌入式開發工具。
+    + 輸出裝置使用 LCD 螢幕或微型投影機。
+    + 使用函式庫為 OpenCV、 OpenGL。
 
 #### 實務電磁演算法於Weka ( Electromagnetism-like mechanism algorithms developed in Weka )
 

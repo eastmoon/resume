@@ -33,7 +33,7 @@
   - 內容描述：
     + 確保環境一致性，完成 Docker 容器化
     + 設計與規劃符合應用腳本撰寫，並補充 Google Cloud Platform 運用腳本
-    + 依據系統架構規劃，設計雲端倉儲的檔案架構、雲端運算主機的佈署架構 
+    + 依據系統架構規劃，設計雲端倉儲的檔案架構、雲端運算主機的佈署架構
 
 <p />
 
@@ -59,7 +59,7 @@
 
 <p />
 
-+ 官方網站、報告網站、報告系統 
++ 官方網站、報告網站、報告系統
   - 時間：2019/06 – 2019/12
   - 專案目標：整合網站專案並開發報告產生系統
   - 語言與框架：PHP & MySQL、PHP Laravel & MySQL、Node.js & Gitbook
@@ -89,8 +89,6 @@
     + 確保環境一致性，完成 Docker 容器化
     + 依據觀察與評量方式需要，設計用於資料呈現與運算的輔助系統
     + 依據行為分析演算需要，設計用於資料清洗的記錄系統
-
-<div STYLE="page-break-after: always;" alt="分頁符號"></div>
 
 #### 遊戲橘子數位科技有限公司
 
@@ -172,8 +170,6 @@
     + 社群軟體自動回應系統 ( Python auto-response system )
     + 分散式叢集數據演算系統 ( Docker & SparkR cluster system )
 
-<div STYLE="page-break-after: always;" alt="分頁符號"></div>
-
 #### 杰星有限公司
 
 <table>
@@ -225,8 +221,6 @@
   - 內容描述：
     + 前端基底為 Angular 資料模組框架、 jQuery Mobile 為 RWD 系統。
     + 網頁嵌入行動裝置使用 PhoneGap 系統。
-
-<div STYLE="page-break-after: always;" alt="分頁符號"></div>
 
 #### Freelancer
 
@@ -294,9 +288,6 @@
     + 代理者系統 ( agent system ) 基底為 C#，處理戰鬥報告計算與建立
     + 後端基底為 PHP、簡易 SOAP Web API。
     + 前端基底為 Flash Action Script、MVC 架構。
-
-
-<div STYLE="page-break-after: always;" alt="分頁符號"></div>
 
 #### 歐拔藍設計 ( Albert Lan Creative )
 
