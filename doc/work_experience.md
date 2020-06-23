@@ -22,7 +22,7 @@
 
 ##### 專案與產品 ( Project & Product )
 
-<img src="../img/gamania-bb-system-roadmap.png" />
+<img src="img//gamania-bb-system-roadmap.png" />
 
 <p />
 
@@ -335,16 +335,16 @@
 
 <table border="0">
   <tr>
-    <td><img src="../img/albert_lan_creative_02.png" /></td>
-    <td><img src="../img/albert_lan_creative_03.png" /></td>
+    <td><img src="img//albert_lan_creative_02.png" /></td>
+    <td><img src="img//albert_lan_creative_03.png" /></td>
   </tr>
   <tr>
-    <td><img src="../img/albert_lan_creative_04.png" /></td>
-    <td><img src="../img/albert_lan_creative_05.png" /></td>
+    <td><img src="img//albert_lan_creative_04.png" /></td>
+    <td><img src="img//albert_lan_creative_05.png" /></td>
   </tr>
   <tr>
-    <td><img src="../img/albert_lan_creative_06.png" /></td>
-    <td><img src="../img/albert_lan_creative_08.png" /></td>
+    <td><img src="img//albert_lan_creative_06.png" /></td>
+    <td><img src="img//albert_lan_creative_08.png" /></td>
   </tr>
 </table>
 
@@ -356,8 +356,8 @@
 
 <table border="0">
   <tr>
-    <td><img src="../img/albert_lan_creative_app_01.jpg" /></td>
-    <td><img src="../img/albert_lan_creative_app_02.jpg" /></td>
+    <td><img src="img//albert_lan_creative_app_01.jpg" /></td>
+    <td><img src="img//albert_lan_creative_app_02.jpg" /></td>
   </tr>
 </table>
 
@@ -370,8 +370,8 @@
 
 <table border="0">
   <tr>
-    <td><img src="../img/albert_lan_creative_algorithm_01.jpg" /></td>
-    <td><img src="../img/albert_lan_creative_algorithm_02.jpg" /></td>
+    <td><img src="img//albert_lan_creative_algorithm_01.jpg" /></td>
+    <td><img src="img//albert_lan_creative_algorithm_02.jpg" /></td>
   </tr>
 </table>
 
