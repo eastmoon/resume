@@ -133,7 +133,7 @@ goto end
         mkdir build\pdf
     )
     xcopy /Y /E doc build\tmp-gitbook
-    copy node\gitbook\*.* build\tmp-gitbook
+    xcopy /Y /E node\gitbook\*.* build\tmp-gitbook
 
     echo ^> Startup docker container instance
     IF defined EBOOK_DEVELOPER (
