@@ -1,6 +1,6 @@
 # third-party library
 pdf/
-tmp/
+tmp-gitbook/
 
 # install library lock file
 

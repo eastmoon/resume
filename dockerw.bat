@@ -119,29 +119,31 @@ goto end
     goto end
 )
 
-:: ------------------- Command "pdf" mathod -------------------
+:: ------------------- Command "gitbook" mathod -------------------
 
 :cli-gitbook (
     echo ^> Build ebook Docker images with gitbook tools
-    docker build --rm -t ebook:%PROJECT_NAME% ./docker/ebook
+    docker build --rm -t ebook:%PROJECT_NAME% ./docker/gitbook
 
     echo ^> Copy document into tmp directory
-    IF NOT EXIST build (
-        mkdir build\tmp
+    IF NOT EXIST build\tmp-gitbook (
+        mkdir build\tmp-gitbook
+    )
+    IF NOT EXIST build\pdf (
         mkdir build\pdf
     )
-    xcopy /Y /E doc build\tmp
-    copy node\gitbook\*.* build\tmp
+    xcopy /Y /E doc build\tmp-gitbook
+    copy node\gitbook\*.* build\tmp-gitbook
 
     echo ^> Startup docker container instance
     IF defined EBOOK_DEVELOPER (
         docker run -ti --rm^
-            -v %cd%\build\tmp:/repo/^
+            -v %cd%\build\tmp-gitbook:/repo/^
             -v %cd%\build\pdf:/repo/build/^
             ebook:%PROJECT_NAME% bash
     ) else (
         docker run -ti --rm^
-            -v %cd%\build\tmp:/repo/^
+            -v %cd%\build\tmp-gitbook:/repo/^
             -v %cd%\build\pdf:/repo/build/^
             ebook:%PROJECT_NAME% bash -l -c "yarn pdf"
     )
