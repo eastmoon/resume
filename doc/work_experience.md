@@ -339,9 +339,6 @@
   </tr>
 </table>
 
-<div>&nbsp;</div>
-<div>&nbsp;</div>
-
 + Air App：
   - 2013 - ASUS POS APP
 
