@@ -26,7 +26,7 @@
   - 設計模式 ( Design Pattern )
   - 專案管理觀念 ( Project management concept )
 
-#### 論文與專題 ( Papers and Thematic )
+#### 論文 ( Papers )
 
 <table>
   <tr>
@@ -42,6 +42,8 @@
 
 + 程式語言：C++、函式庫：OpenCV
 + 關鍵知識：電腦視覺 ( Computer Vision )、影像處理 ( Image Processing )、手勢辨識 ( Gestures Recognition )、粒子過濾演算法 ( Particle filter )、中心移動演算法( Mean shift )、樣板匹配 ( Template matching )、邏輯樣板 ( Logic template )、資料驗證 ( Data verification )
+
+#### 專題 ( Thematic )
 
 <table>
   <tr>
