@@ -1,0 +1,33 @@
+{
+  "name": "ebook",
+  "version": "1.0.0",
+  "description": "It is ebook project for personal resume",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build-markdown && npm run build-html && npm run build-ebook",
+    "build-markdown": "node ./src/convert/markdown.js",
+    "build-html": "next build && next export --outdir build/tmp-ebook-html",
+    "build-ebook": "node ./src/convert/ebook.js"
+  },
+  "keywords": [
+    "markdown-convert",
+    "static-html-export",
+    "ebook"
+  ],
+  "author": "jacky.eastmoon",
+  "license": "ISC",
+  "devDependencies": {
+    "ebook-convert": "^2.0.1",
+    "markdown": "^0.5.0",
+    "shelljs": "^0.8.3"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "bootstrap": "^4.5.0",
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.13.1"
+  }
+}

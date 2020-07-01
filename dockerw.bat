@@ -114,6 +114,7 @@ goto end
     echo.
     echo Command:
     echo      gitbook           Build Resume PDF file by gitbook tool.
+    echo      ebook             Build Resume PDF file by self-defined page.
     echo.
     echo Run 'cli [COMMAND] --help' for more information on a command.
     goto end
@@ -123,7 +124,7 @@ goto end
 
 :cli-gitbook (
     echo ^> Build ebook Docker images with gitbook tools
-    docker build --rm -t ebook:%PROJECT_NAME% ./docker/gitbook
+    docker build --rm -t resume-gitbook:%PROJECT_NAME% ./docker/gitbook
 
     echo ^> Copy document into tmp directory
     IF NOT EXIST build\tmp-gitbook (
@@ -140,12 +141,12 @@ goto end
         docker run -ti --rm^
             -v %cd%\build\tmp-gitbook:/repo/^
             -v %cd%\build\pdf:/repo/build/^
-            ebook:%PROJECT_NAME% bash
+            resume-gitbook:%PROJECT_NAME% bash
     ) else (
         docker run -ti --rm^
             -v %cd%\build\tmp-gitbook:/repo/^
             -v %cd%\build\pdf:/repo/build/^
-            ebook:%PROJECT_NAME% bash -l -c "yarn pdf"
+            resume-gitbook:%PROJECT_NAME% bash -l -c "yarn pdf"
     )
     goto end
 )
@@ -159,6 +160,58 @@ goto end
 
 :cli-gitbook-help (
     echo Build Resume PDF file, using Docker container with node.js images and gitbook tool.
+    echo.
+    echo Options:
+    echo      --dev             Build Docker iamges and into container. it is work for developer.
+    echo.
+    goto end
+)
+
+:: ------------------- Command "ebook" mathod -------------------
+
+:cli-ebook (
+    echo ^> Build ebook Docker images with gitbook tools
+    docker build --rm -t resume-ebook:%PROJECT_NAME% ./docker/ebook
+
+    echo ^> Copy document into tmp directory
+    IF NOT EXIST build\tmp-ebook (
+        mkdir build\tmp-ebook
+    )
+    IF NOT EXIST cache\ebook (
+        mkdir cache\ebook
+    )
+    IF NOT EXIST build\pdf (
+        mkdir build\pdf
+    )
+
+    echo ^> Upgrade library
+
+    docker run -ti --rm^
+        -v %cd%\node\ebook:/repo/^
+        -v %cd%\cache\ebook:/repo/node_modules^
+        resume-ebook:%PROJECT_NAME% bash -l -c "yarn install"
+
+    echo ^> Startup docker container instance
+
+    docker run -ti --rm^
+        -v %cd%\node\ebook:/repo/^
+        -v %cd%\cache\ebook:/repo/node_modules^
+        -v %cd%\build:/repo/build/^
+        -v %cd%\doc:/repo/data/^
+        resume-ebook:%PROJECT_NAME% bash
+    goto end
+)
+
+:cli-ebook-args (
+    for %%p in (%*) do (
+        if "%%p"=="--dev" ( set EBOOK_DEVELOPER=1 )
+    )
+    goto end
+)
+
+:cli-ebook-help (
+    echo Build Resume PDF file, using Docker container with node.js images.
+    echo It will parser Markdown file and retrieve information to using at generate self-defined resume.
     echo.
     echo Options:
     echo      --dev             Build Docker iamges and into container. it is work for developer.

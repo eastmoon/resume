@@ -8,11 +8,6 @@ RUN \
         xz-utils && \
     wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sh /dev/stdin version=3.48.0
 
-# Install gitbook
-RUN \
-    npm install -g gitbook-cli ebook-convert && \
-    gitbook fetch 3.2.3
-
 # Install zh_TW locale and font
 RUN \
     apt-get update -y && \
