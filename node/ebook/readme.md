@@ -45,3 +45,7 @@ yarn build
 + ```npm run build-markdown```，編譯 Markdown 檔案
 + ```npm run build-html```，編譯靜態 HTML 檔案
 + ```npm run build-ebook```，編譯電子書 PDF 檔案
+
+### 注意事項
+
+與 gitbook 生成電子書不同，由於轉換資料、編譯頁面都為客製化，這導致引用諸多第三方工具，在實際測試下，Docker 並無法與 gitbook 一樣將第三方函式庫完成下載後一併封裝在容器映像檔中；因此採用快取目錄緩存第三方資源，此概念亦運用於開發 Android 編譯環境中。
