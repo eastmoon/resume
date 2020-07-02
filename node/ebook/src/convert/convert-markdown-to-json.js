@@ -2,7 +2,7 @@
 const Markdown = require("markdown").markdown;
 
 function newChildren() {
-    return {value: [], list: []};
+    return {name: "", value: [], list: [], child: []};
 }
 
 function renderHTML(value) {
@@ -19,7 +19,7 @@ function parsePara(item) {
         }
         // new children
         if (value.includes("table")) {
-            return parserHTMLTable(value);
+            return parseHTMLTable(value);
         }
         // non parser content
         return renderHTML(value);
@@ -27,7 +27,7 @@ function parsePara(item) {
     return item;
 }
 
-function parserHTMLTable(item) {
+function parseHTMLTable(item) {
     let list = [];
     if (item.includes("table")) {
         let rows = item
@@ -57,7 +57,7 @@ function parserHTMLTable(item) {
     return list;
 }
 
-function parserList(items) {
+function parseList(items) {
     let list = [];
     for (let j = 1; j < items.length ; j++) {
         let item = items[j];
@@ -69,7 +69,7 @@ function parserList(items) {
                 let obj = newChildren();
                 if ( sub[0] === "bulletlist" ) {
                     obj.value = item[1];
-                    obj.list = parserList(sub);
+                    obj.list = parseList(sub);
                     list.push(obj);
                 }
             }
@@ -79,72 +79,55 @@ function parserList(items) {
 }
 
 function treeToJson(jsonml, level = 1, index = 0) {
-    let json = {};
-    let children = newChildren();
+    let json = newChildren();
     let key = null;
     let i = index;
     for ( ; i < jsonml.length ; i++ ) {
         let item = jsonml[i];
         let tmp = null;
         let newChild = null;
-        let isStop = false;
         if ( item instanceof Array ) {
             switch(item[0]) {
                 case "header": {
-                    // Find new header, saving children object into json result.
-                    if (key !== null) {
-                        json[key] = children;
-                    }
-                    // compare header level
-                    if (level === item[1].level) {
-                        // Equal, create new ones.
-                        key = item[2];
-                        children = newChildren();
-                    } else if (level < item[1].level) {
-                        // Bigger,  create children tree
-                        newChild = {
-                            level: item[1].level,
-                            index: i
-                        }
-                    } else {
-                        isStop = true;
+                    newChild = {
+                        key: item[2],
+                        level: item[1].level,
+                        index: i
                     }
                     break;
                 }
-
                 case "bulletlist": {
-                    tmp = parserList(item);
-                    children.list = children.list.concat(tmp);
+                    tmp = parseList(item);
+                    json.list = json.list.concat(tmp);
                     break;
                 }
-
                 case "para": {
                     tmp = parsePara(item);
                     if ( tmp !== null) {
                         if ( tmp instanceof Array ) {
-                            children.value = children.value.concat(tmp);
+                            json.value = json.value.concat(tmp);
                         } else {
-                            children.value.push(tmp);
+                            json.value.push(tmp);
                         }
                     }
                     break;
                 }
             }
         }
-        if ( isStop ) {
-            break;
-        }
+
         if ( newChild !== null ) {
-            tmp = treeToJson(jsonml, newChild.level, newChild.index);
-            i = tmp.index;
-            Object.assign(children, tmp.child);
+            // compare header level
+            if (level < newChild.level) {
+                // Bigger,  create children tree
+                tmp = treeToJson(jsonml, newChild.level, newChild.index + 1);
+                tmp.child.name = newChild.key;
+                i = tmp.index;
+                json.child.push(tmp.child);
+            } else {
+                // level equal or less, stop looping.
+                break;
+            }
         }
-    }
-    // Saving final children
-    if (key === null) {
-        Object.assign(json, children);
-    } else {
-        json[key] = children;
     }
     // Return json object
     if (level > 1) {
@@ -152,6 +135,7 @@ function treeToJson(jsonml, level = 1, index = 0) {
     }
     return json;
 }
+
 module.exports = function(markdwon_text) {
     const tree = Markdown.parse(markdwon_text);
     const json = treeToJson(tree);
