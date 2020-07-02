@@ -15,7 +15,7 @@ function toJson(source, dest, filename) {
 // Transform manager data
 function transform() {
     var sourcePath = dataPath;
-    var destPath = Path.join(outputPath, "tmp-ebook-etl");
+    var destPath = Path.join(outputPath, "tmp-ebook-md2json");
     if (!FileSystem.existsSync(destPath)) {
         console.log(`> Create ${destPath}`);
         Shell.mkdir("-p", destPath);

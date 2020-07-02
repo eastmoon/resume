@@ -10,15 +10,21 @@ const box = {
 }
 
 function HomePage({ posts }) {
+    let {data} = posts;
     return <div style={box}>
-        It is demo home pages, {posts.title}
+        It is demo home pages, {posts.title} <br />
+        {process.env.cwd}<br />
+        {process.env.datapath}<br />
+        {data.child[0].name}
     </div>
 }
 
 export async function getStaticProps() {
   // Call an external API endpoint to get posts
+  let data = require(`${process.env.datapath}/work_experience.json`);
   const posts = {
-      title: "DEMO PAGE by 陳良傑"
+      title: "DEMO PAGE by 陳良傑",
+      data: data
   }
 
   // By returning { props: posts }, the Blog component
