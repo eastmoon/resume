@@ -1,9 +1,13 @@
 const path = require("path");
-const withCSS = require('@zeit/next-css');
+const withCSS = require("@zeit/next-css");
 const nextConfig = {};
 
 // Setting page extensions
 nextConfig.pageExtensions = ["jsx", "js"];
+
+// Change assert path, because PDF generated need use file directory.
+// Ref : https://nextjs.org/docs/api-reference/next.config.js/cdn-support-with-asset-prefix
+nextConfig.assetPrefix = ".";
 
 // Setting environment variable
 nextConfig.env = {

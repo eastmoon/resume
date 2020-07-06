@@ -14,7 +14,7 @@ var options = {
     input: path.join(htmlPath, 'index.html'),
     output: path.join(pdfPath, `personal-resume-overview.pdf`),
     authors: '"Jacky Chen"',
-    customSize: "24.8x35.2",
+    customSize: "12.8x18.05",
     disableFontRescaling: true,
     pdfPageMarginTop: '0',
     pdfPageMarginBottom: '0',
