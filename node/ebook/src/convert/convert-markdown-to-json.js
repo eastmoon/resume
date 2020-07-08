@@ -17,10 +17,14 @@ function parsePara(item) {
         if (value === "<p />" || value === "<p>") {
             return null
         }
-        // new children
-        if (value.includes("table")) {
-            return parseHTMLTable(value);
-        }
+        // parse table
+        let list = null;
+
+        list = parseHTMLTable(value);
+        if (list !== null) return list;
+
+        list = parseMarkdownTable(value);
+        if (list !== null) return list;
         // non parser content
         return renderHTML(value);
     }
@@ -28,8 +32,9 @@ function parsePara(item) {
 }
 
 function parseHTMLTable(item) {
-    let list = [];
+    let list = null;
     if (item.includes("table")) {
+        list = [];
         let rows = item
             .replace("<table>", "")
             .replace("</table>", "")
@@ -51,6 +56,33 @@ function parseHTMLTable(item) {
                         return str !== "";
                     })
                 list.push(cols);
+            }
+        });
+    }
+    return list;
+}
+
+function parseMarkdownTable(item) {
+    let list = null;
+    if (item.includes("|\n|")) {
+        list = [];
+        let rows = item.split("|\n|");
+        let tableSize = 0;
+        rows.forEach((row, i) => {
+            let tmp = null;
+            if (i === 0) {
+                tmp = row
+                    .split("|")
+                    .filter((str) => { return str !== ""})
+                    .map((str) => { return str.trim(); });
+                tableSize = tmp.length;
+                list.push(tmp);
+            }
+            if ( i > 1) {
+                tmp = row
+                    .split("|")
+                    .map((str) => { return str.trim(); });
+                list.push(tmp.slice(0, tableSize));
             }
         });
     }
