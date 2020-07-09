@@ -12,7 +12,7 @@ const pdfPath = path.join(process.cwd(), 'build', 'pdf');
 // see more options at https://manual.calibre-ebook.com/generated/en/ebook-convert.html
 var options = {
     input: path.join(htmlPath, 'index.html'),
-    output: path.join(pdfPath, `personal-resume-overview.pdf`),
+    output: path.join(pdfPath, `resume-overview.pdf`),
     authors: '"Jacky Chen"',
     customSize: "12.8x18.05",
     disableFontRescaling: true,

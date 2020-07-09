@@ -9,7 +9,7 @@
 + 出生日期：1981/01/21
 +	個人研究與實務經歷請參考：
   - Github：https://github.com/eastmoon
-  - Rssume：https://github.com/eastmoon/personal-resume
+  - Rssume：https://github.com/eastmoon/resume
 
 #### 能力摘要 ( Summary of ability )
 
