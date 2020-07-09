@@ -14,7 +14,7 @@ dockerw gitbook
 dockerw ebook
 ```
 
-+ website 履歷網站
++ website 履歷網站 (future work)
 > 使用 next.js 框架，建立讀取 Markdown 為資料來源的個人履歷網站
 
 ```
