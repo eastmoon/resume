@@ -1,18 +1,64 @@
 .page {
     position: relative;
-    background-color: aliceblue;
+    background-color: ghostwhite;
     padding: 10px;
     width: 1240px;
     height: 1760px;
 }
 
-.column ul {
+.column .col-ul {
     padding: 0px;
 }
-.column ul li {
+.column .col-ul .col-li {
     display: inline-block;
 }
-.column ul li div {
-    display: inherit;
+.column .col-ul .col-li .col-box {
+    display: inline-table;
     width: 100%;
+}
+
+.box-style {
+    background-color: lightgray;
+    border-radius: 0.3em;
+    padding: 0.3em;
+}
+
+.block-header {
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: lemonchiffon;
+    border-radius: 0.3em;
+    padding-left: 0.5em;
+}
+.block-body {
+    margin: 1em 0;
+}
+.block-body-ex {
+    margin: 1em;
+}
+
+.content-header {
+    font-weight: bold;
+    background-color: lightcoral;
+    border-radius: 0.3em;
+    padding: 0.5em;
+    margin: 0 0.5em;
+}
+.content-list-header {
+    font-size: 1.1em;
+    background-color: lightcoral;
+    border-radius: 0.3em;
+    padding: 0 0.3em;
+}
+.content-list-body {
+    margin: 0.5em 0;
+}
+.content-job-info {
+    font-size: 0.8em;
+    margin: 0 1em;
+    text-align: right;
+}
+.content-desc {
+    font-size: 0.8em;
+    margin: 1em;
 }
