@@ -192,13 +192,21 @@ goto end
         resume-ebook:%PROJECT_NAME% bash -l -c "yarn install"
 
     echo ^> Startup docker container instance
-
-    docker run -ti --rm^
-        -v %cd%\node\ebook:/repo/^
-        -v %cd%\cache\ebook:/repo/node_modules^
-        -v %cd%\build:/repo/build/^
-        -v %cd%\doc:/repo/data/^
-        resume-ebook:%PROJECT_NAME% bash
+    IF defined EBOOK_DEVELOPER (
+        docker run -ti --rm^
+            -v %cd%\node\ebook:/repo/^
+            -v %cd%\cache\ebook:/repo/node_modules^
+            -v %cd%\build:/repo/build/^
+            -v %cd%\doc:/repo/data/^
+            resume-ebook:%PROJECT_NAME% bash
+    ) else (
+        docker run -ti --rm^
+            -v %cd%\node\ebook:/repo/^
+            -v %cd%\cache\ebook:/repo/node_modules^
+            -v %cd%\build:/repo/build/^
+            -v %cd%\doc:/repo/data/^
+            resume-gitbook:%PROJECT_NAME% bash -l -c "yarn build"
+    )
     goto end
 )
 
