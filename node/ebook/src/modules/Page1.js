@@ -45,14 +45,14 @@ function Page1({ data }) {
         <div>
             <table style={{margin: "0 1.2%"}}>
                 <tr>
-                    <td style={{fontSize: "1.3em", padding: "0.5em 0", width: "22%", backgroundColor: "#e8eaf0", borderRadius: "5px"}}>
+                    <td style={{fontSize: "1.2em", padding: "0.5em 0", width: "22%", backgroundColor: "#e8eaf0", borderRadius: "5px"}}>
                         {
                             intro_profile.list.map((item) => {
                                 if (typeof item === "string") return <div style={{marginLeft: "3%"}}>{item}</div>;
                             })
                         }
                     </td>
-                    <td style={{padding: "0 2%"}}>
+                    <td style={{padding: "0 0 0 2em"}}>
                         {data.introduction.child[0].value}
                     </td>
                 </tr>
