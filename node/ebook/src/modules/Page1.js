@@ -45,7 +45,7 @@ function Page1({ data }) {
         <div>
             <table style={{margin: "0 1.2%"}}>
                 <tr>
-                    <td style={{fontSize: "1.3em", padding: "0.5em 0", width: "22%", backgroundColor: "lightsteelblue", borderRadius: "5px"}}>
+                    <td style={{fontSize: "1.3em", padding: "0.5em 0", width: "22%", backgroundColor: "#e8eaf0", borderRadius: "5px"}}>
                         {
                             intro_profile.list.map((item) => {
                                 if (typeof item === "string") return <div style={{marginLeft: "3%"}}>{item}</div>;
@@ -168,7 +168,7 @@ function Page1({ data }) {
                                         let fs2 = (i > 5) ? 1 : 1.5 - (i/5)*0.5;
                                         return <div style={{position: "relative", display: "inline-block", marginRight: "1.2em"}}>
                                             <font style={{fontSize: `${fs1}em`}}>{item[0]}</font>
-                                            <font style={{fontSize: `${fs2}em`, padding: "0 2px", margin: "0 3px", backgroundColor: "lightcoral", borderRadius: "2px"}}>{item[1]}</font>
+                                            <font style={{fontSize: `${fs2}em`, padding: "0 2px", margin: "0 3px", backgroundColor: "#f1c862", borderRadius: "2px"}}>{item[1]}</font>
                                         </div>;
                                     }
                                 })
@@ -186,7 +186,7 @@ function Page1({ data }) {
                                         let fs2 = (level > 5) ? 1 : 1.5 - (level/5)*0.5;
                                         return <div style={{position: "relative", display: "inline-block", marginRight: "1.2em"}}>
                                             <font style={{fontSize: `${fs1}em`}}>{item[0]}</font>
-                                            <font style={{fontSize: `${fs2}em`, padding: "0 2px", margin: "0 3px", backgroundColor: "lightcoral", borderRadius: "2px"}}>{item[1]}</font>
+                                            <font style={{fontSize: `${fs2}em`, padding: "0 2px", margin: "0 3px", backgroundColor: "#f1c862", borderRadius: "2px"}}>{item[1]}</font>
                                         </div>;
                                     }
                                 })
@@ -202,7 +202,7 @@ function Page1({ data }) {
                                     let fs2 = (level > 5) ? 1 : 1.5 - (level/5)*0.5;
                                     return <div style={{position: "relative", display: "inline-block", marginRight: "1.2em"}}>
                                         <font style={{fontSize: `${fs1}em`}}>{item[0]}</font>
-                                        <font style={{fontSize: `${fs2}em`, padding: "0 2px", margin: "0 3px", backgroundColor: "lightcoral", borderRadius: "2px"}}>{item[1]}</font>
+                                        <font style={{fontSize: `${fs2}em`, padding: "0 2px", margin: "0 3px", backgroundColor: "#f1c862", borderRadius: "2px"}}>{item[1]}</font>
                                     </div>;
                                 }
                             })

@@ -1,6 +1,6 @@
 .page {
     position: relative;
-    background-color: ghostwhite;
+    background-color: #f4f4f4;
     padding: 10px;
     width: 1240px;
     height: 1760px;
@@ -18,7 +18,7 @@
 }
 
 .box-style {
-    background-color: lightgray;
+    background-color: #f4f4f4;
     border-radius: 0.3em;
     padding: 0.3em;
 }
@@ -26,7 +26,7 @@
 .block-header {
     font-size: 1.2em;
     font-weight: bold;
-    background-color: lemonchiffon;
+    border-bottom: 0.2em solid #c3cfdf;
     border-radius: 0.3em;
     padding-left: 0.5em;
 }
@@ -39,14 +39,14 @@
 
 .content-header {
     font-weight: bold;
-    background-color: lightcoral;
+    background-color: #c4cecf;
     border-radius: 0.3em;
     padding: 0.5em;
     margin: 0 0.5em;
 }
 .content-list-header {
     font-size: 1.1em;
-    background-color: lightcoral;
+    background-color: #c4cecf;
     border-radius: 0.3em;
     padding: 0 0.3em;
 }
