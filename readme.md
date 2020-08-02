@@ -24,4 +24,4 @@ dockerw website
 
 ### 相關連結
 
-- Linkedin：https://tw.linkedin.com/pub/jacky-chen/75/a69/89
+- Linkedin：https://www.linkedin.com/in/jacky-chen-liang-chieh/
