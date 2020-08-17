@@ -115,6 +115,7 @@ goto end
     echo Command:
     echo      gitbook           Build Resume PDF file by gitbook tool.
     echo      ebook             Build Resume PDF file by self-defined page.
+    echo      website           Startup a website to shown resume data.
     echo.
     echo Run 'cli [COMMAND] --help' for more information on a command.
     goto end
@@ -220,6 +221,60 @@ goto end
 :cli-ebook-help (
     echo Build Resume PDF file, using Docker container with node.js images.
     echo It will parser Markdown file and retrieve information to using at generate self-defined resume.
+    echo.
+    echo Options:
+    echo      --dev             Build Docker iamges and into container. it is work for developer.
+    echo.
+    goto end
+)
+
+:: ------------------- Command "website" mathod -------------------
+
+:cli-website (
+    echo ^> Build ebook Docker images with gitbook tools
+    docker build --rm -t resume-website:%PROJECT_NAME% ./docker/website
+
+    echo ^> Copy document into tmp directory
+    IF NOT EXIST cache\website (
+        mkdir cache\website
+    )
+
+    echo ^> Upgrade library
+
+    docker run -ti --rm^
+        -v %cd%\node\website:/repo/^
+        -v %cd%\cache\website:/repo/node_modules^
+        resume-ebook:%PROJECT_NAME% bash -l -c "yarn install"
+
+    echo ^> Startup docker container instance
+    IF defined EBOOK_DEVELOPER (
+        docker run -ti --rm^
+            -v %cd%\node\website:/repo/^
+            -v %cd%\cache\website:/repo/node_modules^
+            -v %cd%\doc:/repo/data/^
+            -p 8080:80^
+            resume-ebook:%PROJECT_NAME% bash -l -c "yarn development"
+    ) else (
+        docker run -ti --rm^
+            -v %cd%\node\website:/repo/^
+            -v %cd%\cache\website:/repo/node_modules^
+            -v %cd%\doc:/repo/data/^
+            -p 8080:80^
+            resume-gitbook:%PROJECT_NAME% bash -l -c "yarn build && yarn start"
+    )
+    goto end
+)
+
+:cli-website-args (
+    for %%p in (%*) do (
+        if "%%p"=="--dev" ( set EBOOK_DEVELOPER=1 )
+    )
+    goto end
+)
+
+:cli-website-help (
+    echo Startup resume website, using Docker container with node.js images.
+    echo It will parser Markdown file and retrieve information to shown on website.
     echo.
     echo Options:
     echo      --dev             Build Docker iamges and into container. it is work for developer.

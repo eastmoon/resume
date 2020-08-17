@@ -1,0 +1,14 @@
+# Project folder
+.next/
+.record/
+access.log
+
+# third-party library
+node_modules/
+
+# install library lock file
+npm-debug.*
+package-lock.json
+yarn-error.log
+yarn.lock
+yarn-run.log
