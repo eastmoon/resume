@@ -261,7 +261,7 @@ goto end
                 -v %cd%\cache\website:/repo/node_modules^
                 -v %cd%\doc:/repo/data/^
                 -p 8080:80^
-                resume-ebook:%PROJECT_NAME% bash -l -c "yarn development"
+                resume-ebook:%PROJECT_NAME% bash -l -c "yarn dev"
         ) else (
             docker run -ti --rm^
                 -v %cd%\node\website:/repo/^

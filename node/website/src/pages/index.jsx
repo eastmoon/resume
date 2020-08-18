@@ -1,4 +1,5 @@
-import {scaleLinear} from "d3-scale";
+import fetch from 'isomorphic-unfetch'
+import Logo from 'modules/logo'
 
 const box = {
     position: 'absolute',
@@ -12,12 +13,16 @@ const box = {
 }
 
 function HomePage({ stars }) {
-    const color = scaleLinear()
-                    .domain([60, 120])
-                    .range(["orange", "skyblue"]);
-    return <div id="style={box}>
+    return <div style={box}>
         <Logo />
     </div>
+}
+
+HomePage.getInitialProps = async ({ req }) => {
+    const res = await fetch('https://api.github.com/repos/zeit/next.js')
+    const json = await res.json()
+    console.log(`> Server-Side render : ${json.stargazers_count}`)
+    return { stars: json.stargazers_count }
 }
 
 export default HomePage
