@@ -5,7 +5,7 @@
 <table>
   <tr>
     <th width="10%">職稱</th>
-    <th width="50%">軟體架構技術顧問</th>
+    <th width="50%">系統架構技術顧問</th>
     <th width="10%">時間</th>
     <th width="30%">2020/10 - now</th>
   </tr>
