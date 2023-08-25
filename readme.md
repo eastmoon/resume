@@ -55,6 +55,7 @@ dockerw website
         + [dummy-data-server](https://github.com/eastmoon/dummy-data-server)
         + [multiple-service-webserver](https://github.com/eastmoon/multiple-service-webserver)
         + [i18n-generator](https://github.com/eastmoon/i18n-generator)
+        + [news-crawler](https://github.com/eastmoon/news-crawler)
         + [mapreduce-slim](https://github.com/eastmoon/mapreduce-slim)
         + [react-application-project](https://github.com/eastmoon/react-application-project)
         + [gitbook-project](https://github.com/eastmoon/gitbook-project)
