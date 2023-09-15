@@ -50,6 +50,7 @@ dockerw website
     - 軟體技術
         + [thread-pool](https://github.com/eastmoon/thread-pool)
     - 基礎服務
+        + [algorithm-service-application](https://github.com/eastmoon/algorithm-service-application)
         + [command-line-interface-application](https://github.com/eastmoon/command-line-interface-application)
         + [dummy-data-server](https://github.com/eastmoon/dummy-data-server)
         + [gitbook-project](https://github.com/eastmoon/gitbook-project)
