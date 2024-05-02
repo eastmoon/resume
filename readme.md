@@ -53,6 +53,7 @@ dockerw website
         + [algorithm-service-application](https://github.com/eastmoon/algorithm-service-application)
         + [command-line-interface-application](https://github.com/eastmoon/command-line-interface-application)
         + [dummy-data-server](https://github.com/eastmoon/dummy-data-server)
+        + [frontend-dev-architecture](https://github.com/eastmoon/frontend-dev-architecture)
         + [gitbook-project](https://github.com/eastmoon/gitbook-project)
         + [i18n-generator](https://github.com/eastmoon/i18n-generator)
         + [java-rmi-project](https://github.com/eastmoon/java-rmi-project)
