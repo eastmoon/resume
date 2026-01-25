@@ -34,13 +34,14 @@ dockerw website
     - [research-software-theory](https://github.com/eastmoon/research-software-theory)
     軟體原理調研專案，此專案沒有實作任何程式，僅是整理軟體相關資訊、知識，並依據自學成果撰寫心得與筆記。
 
-+ [<repository>-architecture](https://github.com/eastmoon?tab=repositories&q=-architecture+in%3Aname&type=public&language=&sort=)
++ [<repository>-architecture OR <repository>-framework](https://github.com/eastmoon?tab=repositories&q=-architecture+in%3Aname+OR+-framework+in%3Aname&type=public&language=&sort=)
 架構設計專案，基於個人知識與想法而設計並規劃的軟體、系統架構
     - [遊戲規則架構](https://github.com/eastmoon/game-rule-architecture)
     - [互動架構](https://github.com/eastmoon/interactive-architecture)
     - [資料流架構](https://github.com/eastmoon/dataflow-architecture)
     - [請求服務架構](https://github.com/eastmoon/request-service-architecture)
     - [演算服務架構](https://github.com/eastmoon/calculate-service-architecture)
+    - [MVC 擴展框架](https://github.com/eastmoon/mvc-extended-framework)
 
 + Side Project
 實務性專案，基於個人設計概念的實務專案。
