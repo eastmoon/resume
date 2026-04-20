@@ -13,12 +13,45 @@
     <ul>
       <li> 核心系統架構設計、開發、重構
       <li> 開發環境自動化架構規劃與設計
-      <li> 專案需求軟體設計規劃與撰寫
-      <li> 第三方套件管理、使用建議、調查
-      <li> 產學合作規劃與研究
+      <li> 專案需求軟體設計規劃與實務可行性產品
+      <li> 基礎設施調研，離線環境封裝與部屬
+      <li> 新技術調研、導入與指導
     </ul>
   </td></tr>
 </table>
+
+##### 專案與產品 ( Project & Product )
+
+<p />
+
++ 產品開發環境
+  - 專案目標：基於產品部屬方式，規劃、重構、設計整套 DevOps 流程
+  - 語言與框架：Linux shell script、Python
+  - 基礎設施：Gitlab、Jenkins、Docker、Virtual Box + Vagrant
+  - 內容描述：
+    + DevOps 1.0：持續整合 ( Continuous integration ) 與持續部屬 ( Continuous deployment ) 運作流程
+    + DevOps 2.0：基於軟體物料清單的版本管理機制
+    + DevOps 3.0：各環境整合、部屬權責一致性，完全確保本地、雲端整合與部屬指令一致
+
++ 產品架構規劃
+  - 專案目標：基於產品使用環境特性，規劃、設計、重構產品基礎架構
+  - 語言與框架：Linux shell script、依據服務對應程式語言 ( JavaScript for Website、C# for Server、C++ for Embedded System、Python for Data Engineering )
+  - 內容描述：
+    + 核心產品導入微前端、微服務、微核心架構概念，並推行逐步重構以符合最終產品藍圖
+    + 配合新產品運用環境、使用特性，自規劃階段設計基礎架構與設計藍圖
+    + 設計最小可行性產品 ( Minimum Viable Product ) 讓調研成果留存資訊，以此進行框架、技術導入
+    + 設計數據處理系統，基於 Apacha 開源軟體為基礎設施規劃
+    + 設計嵌入式系統，基於容器化為基礎設施規劃
+
++ 技術調查與導入
+  - 專案目標：根據年度計畫、重大產品事項，進行事前調研、規劃導入流程與指導課程
+  - 語言與框架：依據調研項目對應框架與程式語言，例如規格驅動開發 ( SDD，Spec-Driven Development ) 使用提示詞語法
+  - 內容描述：
+    + AWS 雲端服務與管理機制，包括調研、導入、實務與管理
+    + 工業控制資訊安全調研，配合資安人員導入相關項目，以符合 ISO 62443
+    + 行為驅動開發 ( BDD、Behavior-Driven Development ) 導入，包括調研、框架設計、技術導入與教學
+    + 規格驅動開發 ( SDD，Spec-Driven Development ) 導入，包括調研、框架設計、技術導入與教學
+
 
 #### 遊戲橘子數位科技有限公司 黑盒子研究專案
 
