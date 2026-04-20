@@ -38,6 +38,7 @@
   - 語言與框架：Linux shell script、依據服務對應程式語言 ( JavaScript for Website、C# for Server、C++ for Embedded System、Python for Data Engineering )
   - 內容描述：
     + 核心產品導入微前端、微服務、微核心架構概念，並推行逐步重構以符合最終產品藍圖
+    + 核心產品服務整合機制，產品服務命令列介面規劃、設計、開發、技術導入與教學
     + 配合新產品運用環境、使用特性，自規劃階段設計基礎架構與設計藍圖
     + 設計最小可行性產品 ( Minimum Viable Product ) 讓調研成果留存資訊，以此進行框架、技術導入
     + 設計數據處理系統，基於 Apacha 開源軟體為基礎設施規劃
