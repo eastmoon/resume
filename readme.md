@@ -73,8 +73,8 @@ dockerw website
         + [princess-connect-ReDive-battle-report-project](https://github.com/eastmoon/princess-connect-ReDive-battle-report-project)
     - 人工智慧代理人
         + [leetcode-code-agent](https://github.com/eastmoon/leetcode-code-agent)
-
-
+        + [special-functions-code-agent](https://github.com/eastmoon/special-functions-code-agent)
+        + [paperwork-agent](https://github.com/eastmoon/paperwork-agent)
 
 ### 相關連結
 
